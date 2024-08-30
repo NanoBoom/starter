@@ -1,0 +1,18 @@
+{
+  "extras": [
+    "lazyvim.plugins.extras.coding.luasnip",
+    "lazyvim.plugins.extras.coding.neogen",
+    "lazyvim.plugins.extras.lsp.none-ls",
+    "lazyvim.plugins.extras.lsp.barbecue",
+    "lazyvim.plugins.extras.lang.docker",
+    "lazyvim.plugins.extras.lang.go",
+    "lazyvim.plugins.extras.lang.python",
+    "lazyvim.plugins.extras.ui.alpha",
+    "lazyvim.plugins.extras.util.project",
+    "lazyvim.plugins.extras.util.vim-floaterm"
+  ],
+  "news": {
+    "NEWS.md": "6520"
+  },
+  "version": 6
+}
