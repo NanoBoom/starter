@@ -1,10 +1,11 @@
 {
   "extras": [
-    "lazyvim.plugins.extras.editor.neoscroll",
-    "lazyvim.plugins.extras.editor.outline",
     "lazyvim.plugins.extras.coding.luasnip",
     "lazyvim.plugins.extras.coding.neogen",
     "lazyvim.plugins.extras.coding.zhim",
+    "lazyvim.plugins.extras.editor.neoscroll",
+    "lazyvim.plugins.extras.editor.outline",
+    "lazyvim.plugins.extras.editor.inc-rename",
     "lazyvim.plugins.extras.lsp.none-ls",
     "lazyvim.plugins.extras.lsp.barbecue",
     "lazyvim.plugins.extras.dap.core",
