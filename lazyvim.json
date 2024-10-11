@@ -2,6 +2,7 @@
   "extras": [
     "lazyvim.plugins.extras.coding.luasnip",
     "lazyvim.plugins.extras.coding.neogen",
+    "lazyvim.plugins.extras.coding.avante",
     "lazyvim.plugins.extras.coding.zhim",
     "lazyvim.plugins.extras.editor.neoscroll",
     "lazyvim.plugins.extras.editor.outline",
@@ -9,6 +10,7 @@
     "lazyvim.plugins.extras.lsp.none-ls",
     "lazyvim.plugins.extras.lsp.barbecue",
     "lazyvim.plugins.extras.dap.core",
+    "lazyvim.plugins.extras.dap.nlua",
     "lazyvim.plugins.extras.lang.docker",
     "lazyvim.plugins.extras.lang.go",
     "lazyvim.plugins.extras.lang.python",
