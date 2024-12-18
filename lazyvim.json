@@ -1,33 +1,39 @@
 {
   "extras": [
+    "lazyvim.plugins.extras.ai.avante",
+    "lazyvim.plugins.extras.coding.blink",
     "lazyvim.plugins.extras.coding.luasnip",
     "lazyvim.plugins.extras.coding.neogen",
-    "lazyvim.plugins.extras.coding.avante",
     "lazyvim.plugins.extras.coding.zhim",
-    "lazyvim.plugins.extras.editor.neoscroll",
+    "lazyvim.plugins.extras.editor.nvim-tree",
     "lazyvim.plugins.extras.editor.outline",
+    "lazyvim.plugins.extras.editor.outline-config",
     "lazyvim.plugins.extras.editor.inc-rename",
-    "lazyvim.plugins.extras.lsp.none-ls",
-    "lazyvim.plugins.extras.lsp.barbecue",
-    "lazyvim.plugins.extras.lsp.nlsp-settings",
-    "lazyvim.plugins.extras.lsp.lsp_signature",
-    "lazyvim.plugins.extras.lsp.nvim-lightbulb",
+    "lazyvim.plugins.extras.editor.telescope",
+    "lazyvim.plugins.extras.editor.barbecue",
     "lazyvim.plugins.extras.dap.core",
     "lazyvim.plugins.extras.dap.nlua",
+    "lazyvim.plugins.extras.lsp.none-ls",
+    "lazyvim.plugins.extras.lsp.none-ls-config",
+    "lazyvim.plugins.extras.lsp.nlsp-settings",
     "lazyvim.plugins.extras.lang.docker",
     "lazyvim.plugins.extras.lang.go",
     "lazyvim.plugins.extras.lang.python",
     "lazyvim.plugins.extras.lang.java",
     "lazyvim.plugins.extras.lang.markdown",
     "lazyvim.plugins.extras.ui.alpha",
+    "lazyvim.plugins.extras.ui.alpha-config",
+    "lazyvim.plugins.extras.ui.lualine",
+    "lazyvim.plugins.extras.ui.gruvbox",
     "lazyvim.plugins.extras.util.project",
-    "lazyvim.plugins.extras.util.vim-floaterm",
-    "lazyvim.plugins.extras.util.tmux",
     "lazyvim.plugins.extras.util.startuptime",
-    "lazyvim.plugins.extras.util.hydra"
+    "lazyvim.plugins.extras.util.hydra",
+    "lazyvim.plugins.extras.util.lazy-custom",
+    "lazyvim.plugins.extras.coding.venn",
+    "lazyvim.plugins.extras.util.tmux"
   ],
   "news": {
-    "NEWS.md": "7429"
+    "NEWS.md": "10960"
   },
   "version": 7
 }
