@@ -1,10 +1,12 @@
 {
   "extras": [
     "lazyvim.plugins.extras.ai.codecompanion",
+    "lazyvim.plugins.extras.ai.minuet-ai",
     "lazyvim.plugins.extras.coding.blink",
     "lazyvim.plugins.extras.coding.luasnip",
     "lazyvim.plugins.extras.coding.neogen",
     "lazyvim.plugins.extras.coding.zhim",
+    "lazyvim.plugins.extras.coding.nvim-surround",
     "lazyvim.plugins.extras.editor.nvim-tree",
     "lazyvim.plugins.extras.editor.outline",
     "lazyvim.plugins.extras.editor.outline-config",
@@ -27,7 +29,7 @@
     "lazyvim.plugins.extras.util.project",
     "lazyvim.plugins.extras.util.startuptime",
     "lazyvim.plugins.extras.util.hydra",
-    "lazyvim.plugins.extras.util.lazy-custom",
+    "lazyvim.plugins.extras.util.custom",
     "lazyvim.plugins.extras.util.tmux",
     "lazyvim.plugins.extras.util.openapi",
     "lazyvim.plugins.extras.coding.venn"
