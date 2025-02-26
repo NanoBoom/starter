@@ -1,13 +1,13 @@
 {
   "extras": [
-    "lazyvim.plugins.extras.ai.codecompanion",
-    "lazyvim.plugins.extras.ai.minuet-ai",
+    "lazyvim.plugins.extras.ai.avante",
     "lazyvim.plugins.extras.coding.blink",
     "lazyvim.plugins.extras.coding.luasnip",
     "lazyvim.plugins.extras.coding.neogen",
     "lazyvim.plugins.extras.coding.zhim",
     "lazyvim.plugins.extras.coding.nvim-surround",
     "lazyvim.plugins.extras.editor.nvim-tree",
+    "lazyvim.plugins.extras.editor.colorful-menu",
     "lazyvim.plugins.extras.editor.outline",
     "lazyvim.plugins.extras.editor.outline-config",
     "lazyvim.plugins.extras.editor.inc-rename",
@@ -33,6 +33,7 @@
     "lazyvim.plugins.extras.util.tmux",
     "lazyvim.plugins.extras.util.openapi",
     "lazyvim.plugins.extras.coding.venn"
+
   ],
   "news": {
     "NEWS.md": "10960"
