@@ -30,6 +30,7 @@
     "lazyvim.plugins.extras.util.custom",
     "lazyvim.plugins.extras.util.tmux",
     "lazyvim.plugins.extras.util.openapi",
+    "lazyvim.plugins.extras.util.translator",
     "lazyvim.plugins.extras.coding.venn"
   ],
   "news": {
