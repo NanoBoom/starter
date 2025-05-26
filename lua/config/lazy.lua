@@ -15,6 +15,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+  root = vim.fn.stdpath("data") .. "/lazy/dev", -- directory where plugins will be installed
   spec = {
     -- add LazyVim and import its plugins
     { "doodleEsc/LazyVim", import = "lazyvim.plugins", dev = false, opts = { colorscheme = "gruvbox" } },

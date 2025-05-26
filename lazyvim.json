@@ -6,6 +6,8 @@
     "lazyvim.plugins.extras.coding.luasnip",
     "lazyvim.plugins.extras.coding.neogen",
     "lazyvim.plugins.extras.coding.zhim",
+    "lazyvim.plugins.extras.coding.venn",
+    "lazyvim.plugins.extras.coding.yanky",
     "lazyvim.plugins.extras.coding.nvim-surround",
     "lazyvim.plugins.extras.editor.nvim-tree",
     "lazyvim.plugins.extras.editor.colorful-menu",
@@ -13,6 +15,7 @@
     "lazyvim.plugins.extras.editor.inc-rename",
     "lazyvim.plugins.extras.editor.telescope",
     "lazyvim.plugins.extras.editor.dropbar",
+    "lazyvim.plugins.extras.editor.stopinsert",
     "lazyvim.plugins.extras.dap.core",
     "lazyvim.plugins.extras.dap.nlua",
     "lazyvim.plugins.extras.lsp.none-ls",
@@ -30,8 +33,8 @@
     "lazyvim.plugins.extras.util.custom",
     "lazyvim.plugins.extras.util.tmux",
     "lazyvim.plugins.extras.util.openapi",
-    "lazyvim.plugins.extras.util.translator",
-    "lazyvim.plugins.extras.coding.venn"
+    "lazyvim.plugins.extras.util.nvim-updater",
+    "lazyvim.plugins.extras.util.translator"
   ],
   "news": {
     "NEWS.md": "10960"
