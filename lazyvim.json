@@ -34,7 +34,8 @@
     "lazyvim.plugins.extras.util.tmux",
     "lazyvim.plugins.extras.util.openapi",
     "lazyvim.plugins.extras.util.nvim-updater",
-    "lazyvim.plugins.extras.util.translator"
+    "lazyvim.plugins.extras.util.translator",
+    "lazyvim.plugins.extras.util.rest"
   ],
   "news": {
     "NEWS.md": "10960"
