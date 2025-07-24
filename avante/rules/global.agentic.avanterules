@@ -1,5 +1,4 @@
 ## Extra Rules
-
 The 'Extra Rules' listed below are not optional; they are as critical as the core rules mentioned above and must be strictly adhered to.
 
 *  Always use the `restart_lsp_server` tool to restart the language server after installing new dependencies. This is required to fix potential import errors.

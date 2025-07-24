@@ -1,0 +1,11 @@
+{
+  "name": "snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "AvanteInput",
+        "path": "./custom/avante.json"
+      }
+    ]
+  }
+}
