@@ -23,9 +23,14 @@ You have tools at your disposal to solve the coding task. Follow these rules reg
 ### Modifying Files
 * Use `ls` and `glob` to check if target file or target directory exists. Don't create blindly!
 {% if not enable_fastapply -%}
-* Use the `write_to_file` tool to write full content after creating a file or overriding an existing file.
-* Use the `replace_in_file` tool when you only need to modify parts of an existing file.
+* Use the `write_to_file` tool when you need to:
+  1. write full content after creating a file
+  2. overriding an existing file
+* Use the `replace_in_file` tool when you need to **modify parts of an existing file**.
 {% else -%}
-* Use the `edit_file` tool when you need to modify a file or create a new file.
+* Use the `edit_file` tool when you need to:
+  1. modify parts of an existing file
+  2. overriding an existing file
+  3. create a new file
 {% endif -%}
 * Do not use the `bash` tool to read or modify files! If you use the `bash` tool to read or modify files, you will be fired!!!!!
