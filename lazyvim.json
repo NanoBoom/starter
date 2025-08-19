@@ -8,6 +8,7 @@
     "lazyvim.plugins.extras.coding.venn",
     "lazyvim.plugins.extras.coding.yanky",
     "lazyvim.plugins.extras.coding.nvim-surround",
+    "lazyvim.plugins.extras.formatting.prettier",
     "lazyvim.plugins.extras.editor.nvim-tree",
     "lazyvim.plugins.extras.editor.colorful-menu",
     "lazyvim.plugins.extras.editor.outline",
@@ -16,9 +17,6 @@
     "lazyvim.plugins.extras.editor.dropbar",
     "lazyvim.plugins.extras.dap.core",
     "lazyvim.plugins.extras.dap.nlua",
-    "lazyvim.plugins.extras.lsp.none-ls",
-    "lazyvim.plugins.extras.lsp.nlsp-settings",
-    "lazyvim.plugins.extras.lang.docker",
     "lazyvim.plugins.extras.lang.go",
     "lazyvim.plugins.extras.lang.java",
     "lazyvim.plugins.extras.lang.python",
@@ -37,8 +35,9 @@
     "lazyvim.plugins.extras.util.rest",
     "lazyvim.plugins.extras.custom"
   ],
+  "install_version": 7,
   "news": {
     "NEWS.md": "10960"
   },
-  "version": 7
+  "version": 8
 }
