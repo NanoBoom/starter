@@ -1,12 +1,10 @@
 {
   "extras": [
-    "lazyvim.plugins.extras.ai.avante",
     "lazyvim.plugins.extras.ai.minuet-ai",
-    "lazyvim.plugins.extras.ai.mcphub",
+    "lazyvim.plugins.extras.ai.claude-code",
     "lazyvim.plugins.extras.coding.blink",
     "lazyvim.plugins.extras.coding.luasnip",
     "lazyvim.plugins.extras.coding.neogen",
-    "lazyvim.plugins.extras.coding.fcitx5",
     "lazyvim.plugins.extras.coding.venn",
     "lazyvim.plugins.extras.coding.yanky",
     "lazyvim.plugins.extras.coding.nvim-surround",
