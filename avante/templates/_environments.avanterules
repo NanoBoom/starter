@@ -1,5 +1,0 @@
-{% if system_info -%}
-## System Info
-
-{{system_info}}
-{%- endif %}

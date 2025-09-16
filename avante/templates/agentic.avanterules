@@ -1,4 +1,0 @@
-{% extends "base.avanterules" %}
-{% block extra_prompt %}
-{% include "_task-guidelines.avanterules" %}
-{% endblock %}
