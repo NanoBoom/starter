@@ -1,7 +1,0 @@
-{
-    "add_file_docs": {
-        "prefix": "$docs",
-        "body": "Please add clear and comprehensive documentation to this code, including function descriptions, parameter explanations, and usage examples in ${0:filename}",
-        "description": "Add documentation in file"
-    }
-}
