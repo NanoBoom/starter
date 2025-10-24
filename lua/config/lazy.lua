@@ -17,13 +17,13 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   root = vim.fn.stdpath("data") .. "/lazy", -- directory where plugins will be installed
   dev = {
-    path = "~/Projects",
+    path = "~/Projects/doodleEsc/",
   },
   spec = {
     -- add LazyVim and import its plugins
     { "NanoBoom/LazyVim", import = "lazyvim.plugins", dev = true, opts = { colorscheme = "gruvbox" } },
     -- import/override with your plugins
-    -- { import = "plugins" },
+    { import = "plugins" },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
@@ -38,6 +38,16 @@ require("lazy").setup({
     enabled = true, -- check for plugin updates periodically
     notify = false, -- notify on update
   }, -- automatically check for plugin updates
+  rocks = {
+    enabled = true,
+    root = vim.fn.stdpath("data") .. "/lazy-rocks",
+    server = "https://nvim-neorocks.github.io/rocks-binaries/",
+    -- use hererocks to install luarocks?
+    -- set to `nil` to use hererocks when luarocks is not found
+    -- set to `true` to always use hererocks
+    -- set to `false` to always use luarocks
+    hererocks = true,
+  },
   performance = {
     rtp = {
       -- disable some rtp plugins
