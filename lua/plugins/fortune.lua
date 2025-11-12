@@ -1,5 +1,5 @@
 return {
-  "doodleEsc/fortune.nvim",
+  "NanoBoom/fortune.nvim",
   lazy = true,
   opts = {
     -- max width the fortune section should take place

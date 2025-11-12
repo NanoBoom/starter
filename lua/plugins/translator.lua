@@ -1,5 +1,5 @@
 return {
-  "doodleEsc/translator.nvim",
+  "NanoBoom/translator.nvim",
   enabled = false,
   event = "VeryLazy",
   keys = {

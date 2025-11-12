@@ -31,11 +31,13 @@ Before installation, ensure you have:
 ## 🚀 Installation
 
 1. **Backup your existing configuration** (if any):
+
    ```bash
    mv ~/.config/nvim ~/.config/nvim.backup
    ```
 
 2. **Clone or symlink this repository**:
+
    ```bash
    git clone <your-repo-url> ~/.config/nvim
    # or symlink if you manage dotfiles elsewhere
@@ -43,13 +45,16 @@ Before installation, ensure you have:
    ```
 
 3. **Launch Neovim and install plugins**:
+
    ```bash
    nvim
    ```
+
    Wait for lazy.nvim to automatically install all plugins.
 
 4. **Configure environment variables**:
    Create a `.env` file in the config directory with required API keys:
+
    ```bash
    OPENAI_API_KEY=your_openai_key_here
    OPENAI_BASE_URL=https://openrouter.ai/api/v1
@@ -64,50 +69,60 @@ Before installation, ensure you have:
 ## 🔌 Plugins
 
 ### AI Integration
+
 - **[ClaudeCode.nvim](https://github.com/NanoBoom/claudecode.nvim)** - Claude Code MCP server integration for AI-powered assistance
 
 ### File Management
+
 - **[nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)** - File explorer with advanced features and custom keybindings
 
 ### Search & Navigation
+
 - **[telescope](https://github.com/nvim-telescope/telescope.nvim)** - Fuzzy finder for files, buffers, and more
 - **[dropbar](https://github.com/Bekaboo/dropbar.nvim)** - Winbar showing current code context
 - **[outline](https://github.com/hedyhli/outline.nvim)** - Symbol outline and navigation
 
 ### Code Completion
+
 - **[blink.cmp](https://github.com/saghen/blink.cmp)** - Fast and feature-rich completion engine
 
 ### UI Enhancement
+
 - **[gruvbox](https://github.com/ellisonleao/gruvbox.nvim)** - Retro groove color scheme
 - **[bufferline](https://github.com/akinsho/bufferline.nvim)** - Enhanced buffer and tab line
-- **[colorful-menu](https://github.com/doodleEsc/colorful-menu.nvim)** - Colorized completion menu
+- **[colorful-menu](https://github.com/NanoBoom/colorful-menu.nvim)** - Colorized completion menu
 - **[snacks](https://github.com/folke/snacks.nvim)** - Collection of QoL improvements
 
 ### Development Tools
+
 - **[rest.nvim (kulala)](https://github.com/mistweaverco/kulala.nvim)** - REST API client with .http file support
-- **[openapi](https://github.com/doodleEsc/openapi.nvim)** - OpenAPI specification integration
+- **[openapi](https://github.com/NanoBoom/openapi.nvim)** - OpenAPI specification integration
 - **[markdown-preview](https://github.com/iamcco/markdown-preview.nvim)** - Live markdown preview in browser
 
 ### Utilities
-- **[translator](https://github.com/doodleEsc/translator.nvim)** - AI-powered text translation
-- **[fortune](https://github.com/doodleEsc/fortune.nvim)** - Display random quotes and tips
+
+- **[translator](https://github.com/NanoBoom/translator.nvim)** - AI-powered text translation
+- **[fortune](https://github.com/NanoBoom/fortune.nvim)** - Display random quotes and tips
 - **[tmux](https://github.com/aserowy/tmux.nvim)** - Seamless tmux integration
 
 ## ⌨️ Key Bindings
 
 ### Insert Mode (Emacs-style)
+
 - `<C-b>` / `<C-f>` - Move cursor left/right
 - `<C-a>` - Move to line start
 - `<C-n>` / `<C-p>` - Move cursor down/up
 - `<C-s>` - Save file
 
 ### Claude Code Integration
+
 - `<leader>ab` - Add current buffer to Claude context
 - `<leader>aw` - Send selection (visual mode) or add file from tree
 - `<leader>ar` - Restart Claude Code server
 - `<leader>aj` / `<leader>ak` - Accept/reject diff (vim-style j/k)
 
 ### REST Client
+
 - `<leader>Rs` - Send HTTP request
 - `<leader>Rt` - Toggle headers/body view
 - `<leader>Rb` - Open REST scratchpad
@@ -150,6 +165,7 @@ In Neovim:
 
 1. Create a new file in `lua/plugins/` (e.g., `my-plugin.lua`)
 2. Return a lazy.nvim spec table:
+
    ```lua
    return {
      "author/plugin-name",
@@ -157,6 +173,7 @@ In Neovim:
      opts = {},
    }
    ```
+
 3. Restart Neovim - plugins are auto-loaded from `lua/plugins/`
 
 ## 📚 Resources
