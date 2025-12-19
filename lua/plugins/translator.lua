@@ -1,6 +1,6 @@
 return {
   "NanoBoom/translator.nvim",
-  enabled = false,
+  enabled = true,
   event = "VeryLazy",
   keys = {
     { "<leader>ts", ":Translate<CR>", mode = "v", desc = "Translate" },

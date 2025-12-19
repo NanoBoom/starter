@@ -2,6 +2,7 @@ return {
   "iamcco/markdown-preview.nvim",
   optional = true,
   init = function()
+    vim.g.mkdp_page_title = "${name}"
     vim.g.mkdp_preview_options = {
       mkit = {
         breaks = true,

@@ -20,3 +20,5 @@ vim.g.clipboard = {
 }
 
 vim.g.root_spec = { ".git", "lsp" }
+
+vim.g.lazyvim_python_lsp = "ty"
