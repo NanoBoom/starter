@@ -147,6 +147,18 @@ return {
         end,
         desc = "Toggle File Explorer",
       },
+
+      {
+        "<leader>tf",
+        function()
+          if vim.bo.filetype == "snacks_dashboard" then
+            return
+          end
+          local api = require("nvim-tree.api")
+          api.tree.find_file({ open = true, focus = true })
+        end,
+        desc = "Toggle File Explorer",
+      },
     },
     dependencies = {
       -- "mortepau/codicons.nvim",
@@ -263,7 +275,7 @@ return {
           auto_open = true,
         },
         update_focused_file = {
-          enable = true,
+          enable = false,
           update_root = {
             enable = false,
             ignore_list = {},
