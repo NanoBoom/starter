@@ -4,6 +4,7 @@
 
 vim.opt.mousemoveevent = true
 vim.opt.jumpoptions = "stack"
+vim.opt.relativenumber = false
 
 vim.g.clipboard = {
   name = "uniclipboard",
