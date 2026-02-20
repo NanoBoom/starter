@@ -2,6 +2,7 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+vim.keymap.set("i", "<C-c>", "<Esc>", { noremap = true, silent = true })
 vim.keymap.set("i", "<C-d>", "<C-o>diw", { desc = "Delete inner word" })
 vim.keymap.set("i", "<C-u>", "<C-o>dI", { desc = "Delete to beginning of line" })
 vim.keymap.set("i", "<C-k>", "<C-o>D", { desc = "Delete to end of line" })

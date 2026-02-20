@@ -5,6 +5,7 @@ return {
     require("im_select").setup({
       default_im_select = "com.apple.keylayout.ABC",
       insert_im = "im.rime.inputmethod.Squirrel.Hans",
+      set_default_events = { "InsertLeave", "CmdlineLeave", "FocusGained" },
     })
   end,
 }
