@@ -1,6 +1,7 @@
 return {
   "NanoBoom/im-select.nvim",
   event = "VeryLazy",
+  enabled = vim.fn.has("macunix") == 1,
   config = function()
     require("im_select").setup({
       default_im_select = "com.apple.keylayout.ABC",
