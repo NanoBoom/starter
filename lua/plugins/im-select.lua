@@ -1,5 +1,4 @@
 return {
-  dir = "/Users/fanlz/Projects/NanoBoom/im-select.nvim",
   "NanoBoom/im-select.nvim",
   event = "VeryLazy",
   opts = function(_, opts)
