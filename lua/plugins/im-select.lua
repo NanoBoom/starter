@@ -1,9 +1,9 @@
 return {
+  dir = "/Users/fanlz/Projects/NanoBoom/im-select.nvim",
   "NanoBoom/im-select.nvim",
   event = "VeryLazy",
   opts = function(_, opts)
-    -- opts.set_default_events = { "InsertLeave", "CmdlineLeave", "FocusGained" }
-    opts.set_default_events = { "InsertLeave", "CmdlineLeave" }
+    opts.set_default_events = { "InsertLeave", "CmdlineLeave", "FocusGained" }
     if vim.fn.has("macunix") == 1 then
       opts.default_im_select = "com.apple.keylayout.ABC"
       opts.insert_im = "im.rime.inputmethod.Squirrel.Hans"
