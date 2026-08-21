@@ -43,7 +43,6 @@ local function on_attach(bufnr)
   vim.keymap.set("n", "<C-x>", api.node.open.horizontal, opts("Open: Horizontal Split"))
   vim.keymap.set("n", "<BS>", api.node.navigate.parent_close, opts("Close Directory"))
   vim.keymap.set("n", "<CR>", api.node.open.edit, opts("Open"))
-  vim.keymap.set("n", "<Tab>", api.node.open.preview, opts("Open Preview"))
   vim.keymap.set("n", ">", api.node.navigate.sibling.next, opts("Next Sibling"))
   vim.keymap.set("n", "<", api.node.navigate.sibling.prev, opts("Previous Sibling"))
   vim.keymap.set("n", ".", api.node.run.cmd, opts("Run Command"))
@@ -51,9 +50,9 @@ local function on_attach(bufnr)
   vim.keymap.set("n", "a", api.fs.create, opts("Create"))
   vim.keymap.set("n", "bd", api.marks.bulk.delete, opts("Delete Bookmarked"))
   vim.keymap.set("n", "bmv", api.marks.bulk.move, opts("Move Bookmarked"))
-  vim.keymap.set("n", "B", api.tree.toggle_no_buffer_filter, opts("Toggle No Buffer"))
+  vim.keymap.set("n", "B", api.filter.no_buffer.toggle, opts("Toggle Filter: No Buffer"))
   vim.keymap.set("n", "c", api.fs.copy.node, opts("Copy"))
-  vim.keymap.set("n", "C", api.tree.toggle_git_clean_filter, opts("Toggle Git Clean"))
+  vim.keymap.set("n", "C", api.filter.git.clean.toggle, opts("Toggle Filter: Git Clean"))
   vim.keymap.set("n", "[c", api.node.navigate.git.prev, opts("Prev Git"))
   vim.keymap.set("n", "]c", api.node.navigate.git.next, opts("Next Git"))
   vim.keymap.set("n", "d", api.fs.remove, opts("Delete"))
@@ -62,12 +61,12 @@ local function on_attach(bufnr)
   vim.keymap.set("n", "e", api.fs.rename_basename, opts("Rename: Basename"))
   vim.keymap.set("n", "]e", api.node.navigate.diagnostics.next, opts("Next Diagnostic"))
   vim.keymap.set("n", "[e", api.node.navigate.diagnostics.prev, opts("Prev Diagnostic"))
-  vim.keymap.set("n", "F", api.live_filter.clear, opts("Clean Filter"))
-  vim.keymap.set("n", "f", api.live_filter.start, opts("Filter"))
+  vim.keymap.set("n", "F", api.filter.live.clear, opts("Live Filter: Clear"))
+  vim.keymap.set("n", "f", api.filter.live.start, opts("Live Filter: Start"))
   vim.keymap.set("n", "g?", api.tree.toggle_help, opts("Help"))
   vim.keymap.set("n", "gy", api.fs.copy.absolute_path, opts("Copy Absolute Path"))
-  vim.keymap.set("n", "H", api.tree.toggle_hidden_filter, opts("Toggle Dotfiles"))
-  vim.keymap.set("n", "I", api.tree.toggle_gitignore_filter, opts("Toggle Git Ignore"))
+  vim.keymap.set("n", "H", api.filter.dotfiles.toggle, opts("Toggle Filter: Dotfiles"))
+  vim.keymap.set("n", "I", api.filter.git.ignored.toggle, opts("Toggle Filter: Git Ignored"))
   vim.keymap.set("n", "J", api.node.navigate.sibling.last, opts("Last Sibling"))
   vim.keymap.set("n", "K", api.node.navigate.sibling.first, opts("First Sibling"))
   vim.keymap.set("n", "m", api.marks.toggle, opts("Toggle Bookmark"))
@@ -80,7 +79,7 @@ local function on_attach(bufnr)
   vim.keymap.set("n", "R", api.tree.reload, opts("Refresh"))
   vim.keymap.set("n", "s", api.node.run.system, opts("Run System"))
   vim.keymap.set("n", "S", api.tree.search_node, opts("Search"))
-  vim.keymap.set("n", "U", api.tree.toggle_custom_filter, opts("Toggle Hidden"))
+  vim.keymap.set("n", "U", api.filter.custom.toggle, opts("Toggle Filter: Custom"))
   vim.keymap.set("n", "W", api.tree.collapse_all, opts("Collapse"))
   vim.keymap.set("n", "x", api.fs.cut, opts("Cut"))
   vim.keymap.set("n", "y", api.fs.copy.filename, opts("Copy Name"))
@@ -174,7 +173,11 @@ return {
         hijack_cursor = true,
         hijack_netrw = true,
         hijack_unnamed_buffer_when_opening = false,
-        sort_by = sort_by,
+        sort = {
+          sorter = sort_by,
+          folders_first = true,
+          files_first = false,
+        },
         root_dirs = {},
         prefer_startup_root = false,
         reload_on_bufenter = false,
@@ -182,8 +185,8 @@ return {
         select_prompts = false,
         view = {
           cursorline = true,
+          cursorlineopt = "both",
           debounce_delay = 15,
-          adaptive_size = false,
           centralize_selection = true,
           width = 30,
           side = "left",
@@ -211,10 +214,10 @@ return {
           indent_width = 2,
           add_trailing = false,
           group_empty = false,
-          highlight_git = true,
+          highlight_git = "name",
           highlight_opened_files = "all",
-          root_folder_modifier = ":~",
-          highlight_diagnostics = false,
+          highlight_diagnostics = "none",
+          highlight_hidden = "none",
           highlight_bookmarks = "none",
           highlight_clipboard = "name",
           special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md" },
@@ -231,10 +234,22 @@ return {
             },
           },
           icons = {
-            webdev_colors = true,
+            web_devicons = {
+              file = {
+                enable = true,
+                color = true,
+              },
+              folder = {
+                enable = false,
+                color = true,
+              },
+            },
             git_placement = "signcolumn",
             modified_placement = "after",
-            padding = " ",
+            padding = {
+              icon = " ",
+              folder_arrow = " ",
+            },
             -- symlink_arrow = codicons.get("arrow-small-right"),
             show = {
               file = true,
@@ -299,9 +314,12 @@ return {
           -- },
         },
         filters = {
+          enable = true,
+          git_ignored = false,
           dotfiles = false,
           git_clean = false,
           no_buffer = false,
+          no_bookmark = false,
           custom = {},
           exclude = {},
         },
@@ -312,7 +330,6 @@ return {
         },
         git = {
           enable = true,
-          ignore = false,
           timeout = 200,
           show_on_dirs = true,
           show_on_open_dirs = true,
