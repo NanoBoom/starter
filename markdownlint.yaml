@@ -1,0 +1,9 @@
+# markdownlint 全局基础规则。
+# 通过 nvim-lint / conform 的 --config 参数传入，见 lua/plugins/markdown-lint.lua。
+# 项目内的 .markdownlint*.{json,jsonc,yaml,yml} 会覆盖这里的设置。
+
+# MD013 line-length：正文不该为了 80 列硬折行，交给编辑器软换行。
+MD013: false
+
+# MD060 table-column-style：表格 pipe 两侧空格风格，纯噪音。
+MD060: false
