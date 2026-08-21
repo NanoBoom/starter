@@ -1,6 +1,7 @@
 return {
   "aserowy/tmux.nvim",
   event = "VeryLazy",
+  enabled = false,
   priority = 10,
   keys = {
     {
