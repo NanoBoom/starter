@@ -17,5 +17,16 @@ return {
         theme = "hand",
       },
     }
+    vim.g.mkdp_preview_options = {
+      disable_filename = 1,
+      maid = {
+        flowchart = {
+          htmlLabels = false,
+          nodeSpacing = 50,
+          rankSpacing = 80,
+          curve = "linear",
+        },
+      },
+    }
   end,
 }
