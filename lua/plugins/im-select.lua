@@ -1,5 +1,12 @@
 return {
   "NanoBoom/im-select.nvim",
+  cond = function()
+    -- WSL 使用 Windows 输入法；原生 Linux 需要 Fcitx 的切换工具。
+    return vim.fn.has("linux") ~= 1
+      or vim.fn.has("wsl") == 1
+      or vim.fn.executable("fcitx5-remote") == 1
+      or vim.fn.executable("fcitx-remote") == 1
+  end,
   event = "VeryLazy",
   opts = function(_, opts)
     opts.set_default_events = { "InsertLeave", "CmdlineLeave", "FocusGained" }
